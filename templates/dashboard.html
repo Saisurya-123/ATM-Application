@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='dashboard.css')}}">
+</head>
+<body>
+  <div class="dashboard-container">
+    <aside class="sidebar">
+      <h2>Dashboard</h2>
+      <nav>
+        <ul>
+          <li><a href="{{url_for('deposit')}}">Deposit</a></li>
+          <li><a href="{{url_for('withdrawal')}}">Withdraw</a></li>
+          <li><a href="{{url_for('balance')}}">Balance</a></li>
+          <li><a href="{{url_for('user_statements')}}">Statements</a></li>
+          <li><a href="#logout">Logout</a></li>
+          <li><a href="#delete-account" class="danger">Delete Account</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <h2>{{user}}</h2>
+    <main class="main-content">
+      <h1>Welcome to Your Dashboard</h1>
+      <p>Select an option from the menu to proceed.</p>
+    </main>
+  </div>
+</body>
+</html>

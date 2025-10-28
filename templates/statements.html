@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Statement</title>
+    <style>
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Statement for {{ username }}</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for amount, timestamp in user_statementdata['deposit'] %}
+                <tr>
+                    <td>Deposit</td>
+                    <td>{{ amount }}</td>
+                    <td>{{ timestamp.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ timestamp.strftime('%H:%M:%S') }}</td>
+                </tr>
+            {% endfor %}
+
+            {% for amount, timestamp in user_statementdata['withdraw'] %}
+                <tr>
+                    <td>Withdraw</td>
+                    <td>{{ amount }}</td>
+                    <td>{{ timestamp.strftime('%Y-%m-%d') }}</td>
+                    <td>{{ timestamp.strftime('%H:%M:%S') }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

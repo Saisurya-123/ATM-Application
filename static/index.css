@@ -1,0 +1,59 @@
+/* Reset and font */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Container */
+center {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 60px;
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Title */
+center p {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffeb3b;
+}
+
+/* Buttons */
+button {
+    background: #ffeb3b;
+    color: #1e3c72;
+    border: none;
+    padding: 12px 20px;
+    margin: 12px 0;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+button:hover {
+    background: #fdd835;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove underline from links */
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,65 @@
+/* Page background and font */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(120deg, #fdfbfb, #ebedee);
+    margin: 0;
+    padding: 0;
+}
+
+/* Heading */
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #2c3e50;
+    font-size: 24px;
+}
+
+/* Table container */
+table {
+    width: 70%;
+    margin: 25px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Table header */
+th {
+    background-color: #34495e;
+    color: #090808;
+    padding: 14px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* Table cells */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Alternate row background */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover effect */
+tbody tr:hover {
+    background-color: #f1f1f1;
+    transition: 0.3s ease-in-out;
+}
+
+/* Deposit row styling */
+tbody tr td:first-child {
+    font-weight: bold;
+    color: #2e7d32; /* green for deposit */
+}
+
+/* Withdraw row styling */
+tbody tr td:first-child:contains("Withdraw") {
+    color: #c62828; /* red for withdraw */
+    font-weight: bold;
+}
